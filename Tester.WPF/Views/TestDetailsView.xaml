@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Tester.Views.TestDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border BorderBrush="Black" BorderThickness="0,0,0,1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0">
+                <ContentControl Content="{Binding Input}" Margin="10,5" />
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1">
+                <ContentControl Content="{Binding ExpectedOutput}" Margin="10,5" />
+            </Border>
+            <TextBox Text="{Binding ActualOutput, Mode=OneWay}" Grid.Column="2" Padding="10,5" VerticalScrollBarVisibility="Auto" />
+        </Grid>
+    </Border>
+</UserControl>
